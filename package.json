@@ -1,0 +1,35 @@
+{
+    "name": "@runner/generator-sass",
+    "version": "1.0.0",
+    "description": "Tasks generator for SASS.",
+    "author": {
+        "name": "Stanislav Kalashnik",
+        "email": "darkpark.main@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/runner/generator-sass"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "test": "npm run lint"
+    },
+    "dependencies": {
+        "@runner/logger": "^1.0.0",
+        "node-sass": "^4.9.0"
+    },
+    "devDependencies": {
+        "@cjssdk/eslint-config": "^1.1.2",
+        "eslint": "^4.19.1"
+    },
+    "keywords": [
+        "task",
+        "runner",
+        "generator",
+        "sass"
+    ],
+    "license": "GPL-3.0"
+}
