@@ -5,7 +5,8 @@
 
 'use strict';
 
-var name  = 'sass',
+var path  = require('path'),
+    name  = 'sass',
     tools = require('@runner/tools'),
     log   = require('@runner/logger').wrap(name);
 
@@ -15,22 +16,33 @@ function build ( config, done ) {
 
     // do the magic
     sass.render(config, function ( error, result ) {
-        var files;
+        var targets = [],
+            files;
 
         if ( error ) {
             log.fail(error.toString());
             done(error);
         } else {
+            // add folder path for css file
+            targets.push(path.dirname(config.outFile));
             // add css file
             files = [{name: config.outFile, data: result.css}];
 
-            // add map file
             if ( config.sourceMap && typeof config.sourceMap === 'string' && result.map ) {
+                // add folder path for map file
+                targets.push(path.dirname(config.sourceMap));
+                // add map file
                 files.push({name: config.sourceMap, data: result.map});
             }
 
-            // save generated result
-            tools.write(files, log, done);
+            tools.mkdir(targets, log, function ( error ) {
+                if ( error ) {
+                    done(error);
+                } else {
+                    // save generated result
+                    tools.write(files, log, done);
+                }
+            });
         }
     });
 }
