@@ -19,6 +19,7 @@
     },
     "dependencies": {
         "@runner/logger": "^1.0.0",
+        "@runner/tools": "^1.2.0",
         "node-sass": "^4.9.0"
     },
     "devDependencies": {
