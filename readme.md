@@ -37,7 +37,7 @@ var tasks = generator({
 Add generated tasks to the `runner` instance:
 
 ```js
-var runner = require('@runner/core');
+var runner = require('runner');
 
 Object.assign(runner.tasks, tasks);
 ```
