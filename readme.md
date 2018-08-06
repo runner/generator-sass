@@ -2,17 +2,17 @@ Tasks generator for SASS
 ========================
 
 [![build status](https://img.shields.io/travis/runner/generator-sass.svg?style=flat-square)](https://travis-ci.org/runner/generator-sass)
-[![npm version](https://img.shields.io/npm/v/@runner/generator-sass.svg?style=flat-square)](https://www.npmjs.com/package/@runner/generator-sass)
+[![npm version](https://img.shields.io/npm/v/runner-generator-sass.svg?style=flat-square)](https://www.npmjs.com/package/runner-generator-sass)
 [![dependencies status](https://img.shields.io/david/runner/generator-sass.svg?style=flat-square)](https://david-dm.org/runner/generator-sass)
 [![devDependencies status](https://img.shields.io/david/dev/runner/generator-sass.svg?style=flat-square)](https://david-dm.org/runner/generator-sass?type=dev)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/runner)
-[![RunKit](https://img.shields.io/badge/RunKit-try-yellow.svg?style=flat-square)](https://npm.runkit.com/@runner/generator-sass)
+[![RunKit](https://img.shields.io/badge/RunKit-try-yellow.svg?style=flat-square)](https://npm.runkit.com/runner-generator-sass)
 
 
 ## Installation ##
 
 ```bash
-npm install @runner/generator-sass
+npm install runner-generator-sass
 ```
 
 
@@ -21,7 +21,7 @@ npm install @runner/generator-sass
 Add to the scope:
 
 ```js
-var generator = require('@runner/generator-sass');
+var generator = require('runner-generator-sass');
 ```
 
 Generate tasks according to the given config:
@@ -93,4 +93,4 @@ according to the contribution [rules](.github/contributing.md).
 
 ## License ##
 
-`@runner/generator-sass` is released under the [GPL-3.0 License](http://opensource.org/licenses/GPL-3.0).
+`runner-generator-sass` is released under the [GPL-3.0 License](http://opensource.org/licenses/GPL-3.0).

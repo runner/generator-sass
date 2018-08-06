@@ -6,8 +6,8 @@
 'use strict';
 
 var name  = 'sass',
-    tools = require('@runner/tools'),
-    log   = require('@runner/logger').wrap(name);
+    tools = require('runner-tools'),
+    log   = require('runner-logger').wrap(name);
 
 
 function build ( config, done ) {

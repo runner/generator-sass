@@ -1,5 +1,5 @@
 {
-    "name": "@runner/generator-sass",
+    "name": "runner-generator-sass",
     "version": "1.0.0",
     "description": "Tasks generator for SASS.",
     "author": {
@@ -10,17 +10,14 @@
         "type": "git",
         "url": "https://github.com/runner/generator-sass.git"
     },
-    "publishConfig": {
-        "access": "public"
-    },
     "scripts": {
         "lint": "eslint .",
         "test": "npm run lint"
     },
     "dependencies": {
-        "@runner/logger": "^1.0.0",
-        "@runner/tools": "^1.2.0",
-        "node-sass": "^4.9.0"
+        "node-sass": "^4.9.0",
+        "runner-logger": "^1.0.0",
+        "runner-tools": "^1.2.0"
     },
     "devDependencies": {
         "cjs-eslint": "^1.1.1"
