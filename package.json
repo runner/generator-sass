@@ -1,6 +1,6 @@
 {
     "name": "runner-generator-sass",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Tasks generator for SASS.",
     "author": {
         "name": "Stanislav Kalashnik",
@@ -15,9 +15,9 @@
         "test": "npm run lint"
     },
     "dependencies": {
-        "node-sass": "^4.9.0",
-        "runner-logger": "^1.0.0",
-        "runner-tools": "^1.2.0"
+        "node-sass": "^4.9.2",
+        "runner-logger": "^1.0.1",
+        "runner-tools": "^1.2.1"
     },
     "devDependencies": {
         "cjs-eslint": "^1.1.1"
