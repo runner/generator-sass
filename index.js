@@ -46,28 +46,24 @@ function clear ( config, done ) {
 
 
 function generator ( config = {}, options = {} ) {
-    const tasks = {};
+    const
+        tasks = {},
+        {prefix = name + ':', suffix = ''} = options;
 
     // sanitize and extend defaults
     config = Object.assign({
         indentWidth: 4
     }, config);
 
-    // sanitize and extend defaults
-    options = Object.assign({}, {
-        prefix: name + ':',
-        suffix: ''
-    }, options);
-
-    tasks[options.prefix + 'config' + options.suffix] = function () {
+    tasks[prefix + 'config' + suffix] = function () {
         log.inspect(config, log);
     };
 
-    tasks[options.prefix + 'build' + options.suffix] = function ( done ) {
+    tasks[prefix + 'build' + suffix] = function ( done ) {
         build(config, done);
     };
 
-    tasks[options.prefix + 'clear' + options.suffix] = function ( done ) {
+    tasks[prefix + 'clear' + suffix] = function ( done ) {
         clear(config, done);
     };
 
