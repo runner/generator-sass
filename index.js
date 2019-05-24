@@ -45,14 +45,19 @@ function clear ( config, done ) {
 }
 
 
-function generator ( config, options ) {
+function generator ( config = {}, options = {} ) {
     const tasks = {};
 
     // sanitize and extend defaults
-    generator.config = config = Object.assign({
+    config = Object.assign({
         indentWidth: 4
-    }, config || {});
-    options = Object.assign({}, generator.options, options || {});
+    }, config);
+
+    // sanitize and extend defaults
+    options = Object.assign({}, {
+        prefix: name + ':',
+        suffix: ''
+    }, options);
 
     tasks[options.prefix + 'config' + options.suffix] = function () {
         log.inspect(config, log);
@@ -68,13 +73,6 @@ function generator ( config, options ) {
 
     return tasks;
 }
-
-
-// defaults
-generator.options = {
-    prefix: name + ':',
-    suffix: ''
-};
 
 
 // export main actions
