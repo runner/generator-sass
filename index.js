@@ -5,24 +5,23 @@
 
 'use strict';
 
-var name  = 'sass',
+const
+    name  = 'sass',
     tools = require('runner-tools'),
     log   = require('runner-logger').wrap(name);
 
 
 function build ( config, done ) {
-    var sass = require('node-sass');
+    const sass = require('node-sass');
 
     // do the magic
     sass.render(config, function ( error, result ) {
-        var files;
-
         if ( error ) {
             log.fail(error.toString());
             done(error);
         } else {
             // add css file
-            files = [{name: config.outFile, data: result.css}];
+            const files = [{name: config.outFile, data: result.css}];
 
             // add map file
             if ( config.sourceMap && typeof config.sourceMap === 'string' && result.map ) {
@@ -37,7 +36,7 @@ function build ( config, done ) {
 
 
 function clear ( config, done ) {
-    var files = [config.outFile];
+    const files = [config.outFile];
 
     // add map file
     config.sourceMap && files.push(config.sourceMap);
@@ -47,7 +46,7 @@ function clear ( config, done ) {
 
 
 function generator ( config, options ) {
-    var tasks = {};
+    const tasks = {};
 
     // sanitize and extend defaults
     generator.config = config = Object.assign({

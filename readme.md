@@ -21,13 +21,13 @@ npm install runner-generator-sass
 Add to the scope:
 
 ```js
-var generator = require('runner-generator-sass');
+const generator = require('runner-generator-sass');
 ```
 
 Generate tasks according to the given config:
 
 ```js
-var tasks = generator({
+const tasks = generator({
     file: 'src/sass/develop.scss',
     outFile: 'build/develop/main.css',
     sourceMap: 'build/develop/main.css.map'
@@ -37,7 +37,7 @@ var tasks = generator({
 Add generated tasks to the `runner` instance:
 
 ```js
-var runner = require('runner');
+const runner = require('runner');
 
 Object.assign(runner.tasks, tasks);
 ```
