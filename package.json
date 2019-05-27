@@ -1,6 +1,6 @@
 {
     "name": "runner-generator-sass",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "Tasks generator for SASS.",
     "author": {
         "name": "Stanislav Kalashnik",
