@@ -12,7 +12,7 @@ const
 
 
 function build ( config, done ) {
-    const sass = require('node-sass');
+    const sass = require('sass');
 
     // do the magic
     sass.render(config, function ( error, result ) {
